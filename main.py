@@ -46,7 +46,7 @@ def show_users(users):
     if users is not None:
       print ("User Name\tUser ID")
       for i, user in enumerate(users, start=1):
-          print(f"{user.get_user_name():s}\t"
+          print(f"{user.get_user_name():s}\t\t\t"
                 f"{user.get_user_id():>4d}")
           print()
     else:

@@ -33,4 +33,3 @@ def add_user(user):
 
     except:
         print(f"error opening {FILENAME}")
-        r

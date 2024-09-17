@@ -18,7 +18,7 @@ def main(user=None):
         if command == "show users":
             show_users(users)
         elif command == "add user":
-            add_user(user, users_set)
+            add_user(user, users_set, users)
         elif command == "del user":
             del_user(user)
         elif command == "exit":
@@ -53,7 +53,7 @@ def show_users(users):
     else:
         print ("No Users\r\n")
 
-def add_user(user, users_set):
+def add_user(user, users_set, users):
     user_name = str(input("User Name: "))
 
     user_id = int(input("User ID:"))
@@ -65,6 +65,8 @@ def add_user(user, users_set):
     else:
         users_set.add(user)
         db.add_user(user)
+
+        show_users(users)
 
 def del_user(user):
     print()

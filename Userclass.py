@@ -16,9 +16,9 @@ class User:
     __user_name:str = ""
     __user_id:int = 0
 
-    def __init__(self) -> None:
-        __user_name = "Bob"
-        __user_id = 1
+    def __init__(self, username, userid) -> None:
+        __user_name = username
+        __user_id = userid
 
     @property
     def get_user_name(self):

@@ -10,15 +10,16 @@ def main(user=None):
     show_title()
     show_menu()
     users = db.get_users()
+    users_set = set(users)
     user = User("", 1)
 
     while True:
         command = input("Command: ").lower()
         if command == "show users":
             show_users(users)
-        elif command == "add":
-            add_user(user)
-        elif command == "del":
+        elif command == "add user":
+            add_user(user, users_set)
+        elif command == "del user":
             del_user(user)
         elif command == "exit":
             print("Bye!")
@@ -52,8 +53,18 @@ def show_users(users):
     else:
         print ("No Users\r\n")
 
-def add_user(user):
-    print()
+def add_user(user, users_set):
+    user_name = str(input("User Name: "))
+
+    user_id = int(input("User ID:"))
+
+    user = User(user_name, user_id)
+
+    if user in users_set:
+        print (f"User Found: {user.get_user_name()}\n")
+    else:
+        users_set.add(user)
+        db.add_user(user)
 
 def del_user(user):
     print()

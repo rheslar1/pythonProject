@@ -26,7 +26,7 @@ def get_users():
 def add_user(user):
     try:
         if os.path.exists(FILENAME):
-            with open(FILENAME, 'w', newline='') as csvfile:
+            with open(FILENAME, 'a', newline='') as csvfile:
                 writer = csv.writer(csvfile)
 
                 writer.writerow([user.get_user_name(), user.get_user_id()])

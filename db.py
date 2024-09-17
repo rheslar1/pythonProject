@@ -31,5 +31,6 @@ def add_user(user):
 
                 writer.writerow([user.get_user_name(), user.get_user_id()])
 
+
     except:
         print(f"error opening {FILENAME}")

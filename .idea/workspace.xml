@@ -7,11 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03cd64d2-553d-46f3-bc64-8d0adac2836a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Userclass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Userclass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
-    </list>
+    <list default="true" id="03cd64d2-553d-46f3-bc64-8d0adac2836a" name="Changes" comment="Added check for existing csv file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,12 +121,25 @@
       <workItem from="1726585063938" duration="225000" />
       <workItem from="1726585304746" duration="192000" />
       <workItem from="1726585569686" duration="542000" />
-      <workItem from="1726586302284" duration="183000" />
+      <workItem from="1726586302284" duration="644000" />
     </task>
+    <task id="LOCAL-00001" summary="Added check for existing csv file">
+      <option name="closed" value="true" />
+      <created>1726586789058</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726586789058</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added check for existing csv file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added check for existing csv file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -10,7 +10,7 @@ def main(user=None):
     show_title()
     show_menu()
     users = db.get_users()
-    user = User()
+    user = User("", 1)
 
     while True:
         command = input("Command: ").lower()
@@ -44,7 +44,11 @@ def show_users(users):
     """
     print("Users\r\n")
     if users is not None:
-      print()
+      print ("User Name\tUser ID")
+      for i, user in enumerate(users, start=1):
+          print(f"{user.get_user_name():s}\t"
+                f"{user.get_user_id():>4d}")
+          print()
     else:
         print ("No Users\r\n")
 

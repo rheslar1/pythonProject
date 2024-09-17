@@ -11,7 +11,7 @@ def get_users():
             reader = csv.reader(file)
             for row in reader:
                 # convert row to Product object
-                user = User(row[0], float(row[1]))
+                user = User(str(row[0]), int(row[1]))
             users.append(user)
         return users
     else:

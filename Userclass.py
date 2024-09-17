@@ -5,9 +5,7 @@ from dataclasses import dataclass
 
 
 def create_user(user_name, user_id):
-    user = User()
-    user.set_user_name(user_name)
-    user.set_user_id(user_id)
+    user = User(user_name, user_id)
     return user
 
 
@@ -16,15 +14,13 @@ class User:
     __user_name:str = ""
     __user_id:int = 0
 
-    def __init__(self, username, userid) -> None:
-        __user_name = username
-        __user_id = userid
+    def __init__(self, username, userid):
+        self.__user_name = username
+        self.__user_id = userid
 
-    @property
     def get_user_name(self):
         return self.__user_name
 
-    @property
     def get_user_id(self):
         return self.__user_id
 

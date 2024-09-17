@@ -12,7 +12,7 @@ def get_users():
             for row in reader:
                 # convert row to Product object
                 user = User(str(row[0]), int(row[1]))
-            users.append(user)
+                users.append(user)
         return users
     else:
         return None

@@ -2,9 +2,8 @@ name: myAction
 on:
   push:
     branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
-      -
+  pull_request: [ $default-branch ]
+    
 jobs:
   build:
 

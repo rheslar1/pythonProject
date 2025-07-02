@@ -9,8 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - name: run_remove_packages_script
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+    - name: Remove_Packages
+      uses: actions/checkout@v4
+    - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+    - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+    - run: git checkout HEAD^
+    - run: echo "🍏 This job's status is ${{ job.status }}."
       

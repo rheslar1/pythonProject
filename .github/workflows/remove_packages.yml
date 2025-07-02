@@ -1,22 +1,15 @@
-name: myAction
-run-name: ${{ github.actor }} is running the checkout action
 on:
-  push:
-    branches: main
-  pull_request:
-    branches: main
-    
-jobs:
-  checkout:
-    name: Checkout main
+  workflow_run:
+    workflows: [Checkout]
+    types:
+      - completed
+jobs:   
+  remove_packages:
+    name: remove packages main
     runs-on: ubuntu-latest
     environment: production
-
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 2
+    - name: RemovePackages
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
     - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
     - run: git checkout HEAD^

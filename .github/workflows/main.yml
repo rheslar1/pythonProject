@@ -1,21 +1,23 @@
 name: myAction
 on:
   push:
-    branches: dev
-  pull_request:
-    branches: dev 
+    branches: main
+    pull_request:
+    branches: main
     
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    environment: development
+    environment: production
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with: 
-        ref: dev
+    - name: Checkout Specific Branch
+    - uses: actions/checkout@v4
+      with:
+         ref: main
+     
+      
     
      
         

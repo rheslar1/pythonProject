@@ -5,13 +5,13 @@ on:
   pull_request:
     branches: [ $default-branch ]
 jobs:
-    checkout-branch:
-     runs-on: ubuntu-latest
-     steps:
-	name: Checkout Specific Branch
+	checkout-branch:
+	runs-on: ubuntu-latest
+	steps:
+	- name: Checkout Specific Branch
 	uses: actions/checkout@v4
 	with:
-		ref: dev
+	ref: my-branch # Replace 'my-branch' with your branch name
     
     
      

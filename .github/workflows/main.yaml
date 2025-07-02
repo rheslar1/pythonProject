@@ -1,9 +1,9 @@
 name: myAction
 on:
   push:
-    
+    branches: main
   pull_request:
-    
+    branches: main
     
 jobs:
   deploy:
@@ -15,4 +15,4 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
       with: 
-        ref: dev
+        ref: main

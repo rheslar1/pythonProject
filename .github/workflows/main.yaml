@@ -16,6 +16,5 @@ jobs:
       uses: actions/checkout@v4
       with: 
         ref: main
-        with:
-    fetch-depth: 2
-      - run: git checkout HEAD^
+        fetch-depth: 2
+    - run: git checkout HEAD^

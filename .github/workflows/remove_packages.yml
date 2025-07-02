@@ -3,6 +3,10 @@ on:
     workflows: [checkout]
     types:
       - completed
+    remove_packages:
+    name: remove packages main
+    runs-on: ubuntu-latest
+    environment: production
         steps:
       - name: run_remove_packages_script
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."

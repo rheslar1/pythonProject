@@ -1,9 +1,22 @@
 name: myAction
 on:
   push:
-    branches: [ $main ]
+    branches: [ $default-branch ]
   pull_request:
-    branches: [ $main ]
-uses: actions/checkout@v4
-  with: main
+    branches: [ $default-branch ]
+    
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: development
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with: 
+        ref: dev
+    
+     
+        
 

@@ -7,7 +7,7 @@ on:
 jobs:
   checkout-branch:
   runs-on: ubuntu-latest
-  steps:
+    steps:
     - name: Checkout Specific Branch
     uses: actions/checkout@v4
 	with:

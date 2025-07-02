@@ -1,6 +1,6 @@
 on:
   workflow_run:
-    workflows: ["Checkout"]
+    workflows: ["Checkout Branch"]
     types:
     - completed
 jobs:

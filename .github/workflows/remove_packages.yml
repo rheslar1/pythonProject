@@ -1,3 +1,4 @@
+name: myAction1
 on:
   workflow_run:
     workflows: Checkout

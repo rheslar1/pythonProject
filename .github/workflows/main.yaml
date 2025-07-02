@@ -1,4 +1,4 @@
-name: CheckoutCode
+name: Checkout Branch
 run-name: ${{ github.actor }} is running the checkout action
 on:
   push:

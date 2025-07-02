@@ -3,14 +3,15 @@ on:
     workflows: [Checkout]
     types:
       - completed
-jobs:   
-  remove_packages:
-    name: remove packages main
+jobs:
+  on-success:
     runs-on: ubuntu-latest
-    environment: production
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-     - name: RemovePackages
-     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-     - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-     - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: echo 'The triggering workflow passed'
+  on-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - run: echo 'The triggering workflow failed'
       

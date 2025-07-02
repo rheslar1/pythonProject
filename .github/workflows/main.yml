@@ -12,10 +12,9 @@ jobs:
     environment: production
 
     steps:
-    - name: Checkout Specific Branch
+    - name: Checkout Branch
     - uses: actions/checkout@v4
-      with:
-         ref: main
+     
      
       
     

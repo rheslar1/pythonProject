@@ -1,4 +1,4 @@
-name: myAction
+name: CheckoutCode
 run-name: ${{ github.actor }} is running the checkout action
 on:
   push:

@@ -4,6 +4,5 @@ on:
     branches: [ $dev ]
   pull_request:
     branches: [ $dev ]
-uses: actions/checkout@v4
-  with: [ $dev ]
+
 

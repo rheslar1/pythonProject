@@ -8,7 +8,7 @@ on:
     
 jobs:
   checkout:
-    name: Checkout main
+    name: Checkout
     runs-on: ubuntu-latest
     environment: development
 

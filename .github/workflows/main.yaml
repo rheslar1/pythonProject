@@ -6,28 +6,15 @@ on:
     branches: main
     
 jobs:
-  deploy:
-    name: Checkout
+  checkout:
+    name: Checkout main
     runs-on: ubuntu-latest
     environment: development
 
     steps:
-    - name: Checkout Branch
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
       with:
         fetch-depth: 2
     - run: git checkout HEAD^
-     
       
-    
-     
-        
-
-  
-    
-     
-    
-      
-    
-    
-    

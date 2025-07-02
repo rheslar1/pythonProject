@@ -10,7 +10,7 @@ jobs:
   checkout:
     name: Checkout main
     runs-on: ubuntu-latest
-    environment: production
+    environment: development
 
     steps:
     - name: Checkout

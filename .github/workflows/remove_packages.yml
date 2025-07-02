@@ -10,7 +10,6 @@ jobs:
     environment: production
     steps:
     - name: Remove_Packages
-      uses: actions/checkout@v4
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
     - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
     - run: git checkout HEAD^

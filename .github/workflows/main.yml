@@ -2,17 +2,15 @@ name: myAction
 on:
   push:
     branches: [ $default-branch ]
-  pull_request:
+  pull_request: 
     branches: [ $default-branch ]
 jobs:
-  checkout-branch:
-  runs-on: ubuntu-latest
-   steps:
-   - name: Checkout Specific Branch
-     uses: actions/checkout@v4
-     with:
-      ref: dev
+  build:
+
+    runs-on: ubuntu-latest
     
+    steps:
+      - uses: actions/checkout@v4
     
      
     

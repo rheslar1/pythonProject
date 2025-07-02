@@ -1,5 +1,5 @@
 name: myAction
-run-name: ${{ github.actor }} is testing out GitHub Actions 
+run-name: ${{ github.actor }} is running the checkout action
 on:
   push:
     branches: main
@@ -13,6 +13,7 @@ jobs:
     environment: development
 
     steps:
+    - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }}
     - name: Checkout
       uses: actions/checkout@v4
       with:

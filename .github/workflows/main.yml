@@ -1,8 +1,16 @@
 name: myAction
 on:
   push:
-    branches: [ $dev ]
+    branches: [ $default-branch ]
   pull_request:
-    branches: [ $dev ]
-
+    branches: [ $default-branch ]
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+	      ref: dev
+    
+    
 

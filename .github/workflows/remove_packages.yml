@@ -15,7 +15,9 @@ jobs:
         - run: echo 'The triggering workflow passed'
           shell: bash
         - name: Run a script'
-          run: echo ${PWD} | ls -la
+          run: |
+            echo ${PWD} | 
+            ls -la
         -
       
   on-failure:

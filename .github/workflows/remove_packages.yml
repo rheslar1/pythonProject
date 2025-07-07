@@ -16,8 +16,8 @@ jobs:
         - name: Build Docker
           run: | 
             mkdir -p "${PWD}/scripts" 
-            cd "${PWD}/scripts" |
-            ls
+            cd ${PWD}/scripts" 
+            ls -la
       
   on-failure:
     runs-on: ubuntu-latest

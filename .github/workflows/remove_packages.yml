@@ -15,7 +15,8 @@ jobs:
           run: echo ${PWD}
         - name: Build Docker
           run: | 
-            cd ../../ |
+            cd ../../../ |
+            echo ${PWD} |
             ls -la
       
   on-failure:

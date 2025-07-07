@@ -23,8 +23,7 @@ jobs:
     - run: echo "🍏 This job's status is ${{ job.status }}."
     - name: RemovePackages
       run:  | 
-        ls -la |
-        bash ./my-script.sh
+        ls -la 
         
        
 

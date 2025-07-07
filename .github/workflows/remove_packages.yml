@@ -16,7 +16,7 @@ jobs:
         - name: Build Docker
           run: | 
             mkdir -p "${PWD}/scripts" 
-            cd ${PWD}/scripts" 
+            cd ${PWD}/scripts |
             ls -la
       
   on-failure:

@@ -10,9 +10,9 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
         - run: echo 'The triggering workflow passed'
-        - run: ls "${{ format('{0}/.github/scripts', github.workspace) }}"
         - name: Run a script
-          run: /scripts/my-script.sh
+          shell: bash
+          run: ./scripts/my-script.sh
   on-failure:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}

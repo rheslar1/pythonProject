@@ -8,14 +8,18 @@ on:
     
 jobs:
   Checkout:
-    name: Checkout main branch
+    name: Checkout branch main
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        
     environment: production
-
     steps:
-    - name: Checkout
+    - name: Checkout 
       uses: actions/checkout@v4
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
     - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
     - run: echo "🍏 This job's status is ${{ job.status }}."
-      
+    - name: RemovePackages
+      run: ls -la

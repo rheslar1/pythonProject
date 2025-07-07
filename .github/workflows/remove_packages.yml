@@ -8,17 +8,18 @@ jobs:
   on-success:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    defaults:
+     defaults:
       run:
-        working-directory: ./.scripts
+        shell: bash
     steps:
         - run: echo 'The triggering workflow passed'
-          shell: bash
-        - name: Run a script'
-          run: |
-            echo ${PWD} | 
-            ls -la
-        -
+        - name: Run a script
+          run: ls -la
+  on-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - run: echo 'The triggering workflow failed'
       
   on-failure:
     runs-on: ubuntu-latest

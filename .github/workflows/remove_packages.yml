@@ -15,7 +15,6 @@ jobs:
           run: echo ${PWD}
         - name: Build Docker
           run: | 
-              echo "${PWD}" |
               cd "${PWD}/.github
              
   on-failure:

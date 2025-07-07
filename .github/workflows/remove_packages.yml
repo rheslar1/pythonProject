@@ -15,8 +15,10 @@ jobs:
           run: echo ${PWD}
         - name: Build Docker
           run: | 
-              ls "${PWD}/scripts"
-             
+            mkdir -p "${PWD}/scripts" 
+            cd "${PWD}/scripts" |
+            ls
+      
   on-failure:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}

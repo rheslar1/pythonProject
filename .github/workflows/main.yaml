@@ -13,7 +13,6 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./scripts
     environment: production
     steps:
     - name: Checkout 
@@ -23,6 +22,6 @@ jobs:
     - run: echo "🍏 This job's status is ${{ job.status }}."
     - name: RemovePackages
       run: |
-        ls -la |
+        ls -la /scripts |
         bash ./my-script.sh
 

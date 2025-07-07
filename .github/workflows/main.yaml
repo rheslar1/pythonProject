@@ -8,7 +8,7 @@ on:
     
 jobs:
   Checkout:
-    name: Checkout branch main
+    name: Checkout and run scripts
     runs-on: ubuntu-latest
     defaults:
       run:

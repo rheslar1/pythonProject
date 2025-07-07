@@ -12,11 +12,11 @@ jobs:
         - run: echo 'The triggering workflow passed'
           shell: bash
         - name: Run a script'
-          run: echo ${GITHUB_WKSPACE} | ls ${GITHUB_WORKSPACE}/scripts
+          run: echo ${GITHUB_WKSPACE} 
         - name: Build Docker
           run: |
              chmod +x "${GITHUB_WORKSPACE}/../scripts/my-script.sh"
-             ${GITHUB_WORKSPACE}/../docker/build-docker.sh
+             ${GITHUB_WORKSPACE}/../scripts/my-script.sh
   on-failure:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}

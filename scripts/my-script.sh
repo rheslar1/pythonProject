@@ -1,2 +1,3 @@
 #!/bin/bash
-ls -la /scripts
+echo "hello from a script"
+

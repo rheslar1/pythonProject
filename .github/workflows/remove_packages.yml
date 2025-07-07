@@ -14,8 +14,9 @@ jobs:
         - name: Run a script'
           run: echo ${PWD}
         - name: Build Docker
-          run: |
-             cd "${PWD}/scripts"
+          run: | 
+              echo "${PWD}" |
+              cd "${PWD}/../scripts"
              
   on-failure:
     runs-on: ubuntu-latest

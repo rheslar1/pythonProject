@@ -15,7 +15,7 @@ jobs:
           run: echo ${PWD}
         - name: Build Docker
           run: |
-             mkdir -P "${PWD}/scripts
+             mkdir -P "${PWD}/scripts"
              
   on-failure:
     runs-on: ubuntu-latest

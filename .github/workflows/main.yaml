@@ -2,9 +2,9 @@ name: Checkout and Build Branch
 run-name: ${{ github.actor }} is running the checkout action
 on:
   push:
-    branches: main
+    branches: dev
   pull_request:
-    branches: main
+    branches: dev
     
 jobs:
   Build:
@@ -14,9 +14,9 @@ jobs:
       run:
         shell: bash
         working-directory: ./scripts
-    environment: production
+    environment: development
     steps:
-    - name: Checkout branch main
+    - name: Checkout branch dev
       uses: actions/checkout@v4
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
     - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."

@@ -12,8 +12,8 @@ jobs:
         - run: echo 'The triggering workflow passed'
           shell: bash
         - name: Run a script'
-          working-directory: ${GITHUB_WORKSPACE}/../scripts
-          run: ls ${GITHUB_WORKSPACE}/../scripts
+          working-directory: "${GITHUB_WORKSPACE}/../scripts"
+          run: ls 
              
   on-failure:
     runs-on: ubuntu-latest

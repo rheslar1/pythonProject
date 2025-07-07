@@ -7,7 +7,7 @@ on:
     branches: main
     
 jobs:
-  Checkout:
+  Build:
     name: Checkout and Remove Packages
     runs-on: ubuntu-latest
     defaults:

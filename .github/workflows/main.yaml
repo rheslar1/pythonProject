@@ -15,10 +15,7 @@ jobs:
     steps:
     - name: Checkout 
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 2
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
     - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-    - run: git checkout HEAD^
     - run: echo "🍏 This job's status is ${{ job.status }}."
     

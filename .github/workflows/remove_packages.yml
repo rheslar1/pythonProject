@@ -1,9 +1,4 @@
 name: Run remove packages
-on:
-  workflow_run:
-    workflows: ["Checkout Branch"]
-    types:
-    - completed
 jobs:
   on-success:
     runs-on: ubuntu-latest

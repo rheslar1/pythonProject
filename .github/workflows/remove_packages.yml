@@ -1,7 +1,6 @@
-name: myAction1
 on:
   workflow_run:
-    workflows: [myAction"]
+    workflows: ["Checkout Branch"]
     types:
     - completed
 jobs:

@@ -2,7 +2,7 @@ name: Checkout Branch
 run-name: ${{ github.actor }} is running the checkout action
 on:
   push:
-    branches: dev
+    branches: main
   pull_request:
     branches: main
     

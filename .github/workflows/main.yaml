@@ -22,10 +22,14 @@ jobs:
     - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
     - run: echo "🍏 This job's status is ${{ job.status }}."
     - name: RemovePackages
-      run:  | 
-        ls -la 
+      run:  echo ""
+        
   RemovePackages:
     runs-on: ubuntu-latest
+     defaults:
+      run:
+        shell: bash
+        working-directory: ./scripts
     steps:
     - name: RemovePackages
       run:  | 

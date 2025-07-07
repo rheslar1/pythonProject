@@ -15,7 +15,7 @@ jobs:
           run: echo ${PWD}
         - name: Build Docker
           run: |
-             chmod +x "${GITHUB_WORKSPACE}/../scripts/my-script.sh"
+             chmod +x ${PWD}/scripts/my-script.sh"
              ${GITHUB_WORKSPACE}/../scripts/my-script.sh
   on-failure:
     runs-on: ubuntu-latest

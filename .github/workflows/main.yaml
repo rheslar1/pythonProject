@@ -5,7 +5,7 @@ on:
     branches: main
   pull_request:
     branches: main
-    
+   
 jobs:
   Checkout:
     name: Checkout 
@@ -13,7 +13,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: scripts
+        working-directory: ./scripts
     environment: production
     steps:
     - name: Checkout 
@@ -21,8 +21,19 @@ jobs:
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
     - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
     - run: echo "🍏 This job's status is ${{ job.status }}."
-  OnSuccess:
+    - name: RemovePackages
+      run:  echo ""
+        
+  RemovePackages:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./scripts
     steps:
-    - name: Remove Packages
-      run: ls -la
+    - name: RemovePackages
+      run:  | 
+        ls -la 
+        
+       
+

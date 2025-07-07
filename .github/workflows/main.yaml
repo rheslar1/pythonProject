@@ -10,6 +10,10 @@ jobs:
   Checkout:
     name: Checkout branch main
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./scripts
     environment: production
     steps:
     - name: Checkout 

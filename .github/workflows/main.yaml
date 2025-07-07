@@ -26,7 +26,7 @@ jobs:
         
   RemovePackages:
     runs-on: ubuntu-latest
-     defaults:
+    defaults:
       run:
         shell: bash
         working-directory: ./scripts

@@ -25,4 +25,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Remove Packages
-      run: ls -la
+      run: }
+      ls -la |
+      bash ./my-script.sh

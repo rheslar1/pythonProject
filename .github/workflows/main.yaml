@@ -24,6 +24,12 @@ jobs:
     - name: RemovePackages
       run:  | 
         ls -la 
+  RemovePackages:
+    runs-on: ubuntu-latest
+    steps:
+    - name: RemovePackages
+      run:  | 
+        ls -la 
         
        
 

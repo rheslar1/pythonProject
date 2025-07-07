@@ -12,7 +12,7 @@ jobs:
         - run: echo 'The triggering workflow passed'
           shell: bash
         - name: Run a script'
-          run: echo ${GITHUB_WKSPACE} 
+          run: echo ${PWD}
         - name: Build Docker
           run: |
              chmod +x "${GITHUB_WORKSPACE}/../scripts/my-script.sh"

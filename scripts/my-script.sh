@@ -1,3 +1,3 @@
-#!/bin/sh
-ls -la /scripts
+#!/bin/bash
+echo "hello from a script"
 

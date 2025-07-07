@@ -1,22 +1,26 @@
-name: Checkout Branch
+name: Checkout and Build Branch
 run-name: ${{ github.actor }} is running the checkout action
 on:
   push:
-    branches: dev
+    branches: main
   pull_request:
-    branches: dev
+    branches: main
     
 jobs:
-  Checkout:
-    name: Checkout branch dev
+  Build:
+    name: Checkout and Remove Packages
     runs-on: ubuntu-latest
-    environment: development
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./scripts
+    environment: production
     steps:
-    - name: Checkout 
+    - name: Checkout branch main
       uses: actions/checkout@v4
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
     - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
     - run: echo "🍏 This job's status is ${{ job.status }}."
-    - name: RemovePackages
-      run: ls -la
+    - name: Remove_Packages
+      run: bash ./my-script.sh
     

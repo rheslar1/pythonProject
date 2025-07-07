@@ -1,3 +1,4 @@
+name: Run remove packages
 on:
   workflow_run:
     workflows: ["Checkout Branch"]

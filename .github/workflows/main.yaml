@@ -8,7 +8,7 @@ on:
     
 jobs:
   Checkout:
-    name: Checkout main branch
+    name: Checkout dev branch
     runs-on: ubuntu-latest
     environment: development
 

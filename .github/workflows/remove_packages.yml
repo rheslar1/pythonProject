@@ -8,6 +8,9 @@ jobs:
   on-success:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    defaults:
+      run:
+        working-directory: ./scripts
     steps:
         - run: echo 'The triggering workflow passed'
           shell: bash
@@ -15,7 +18,6 @@ jobs:
           run: echo ${PWD}
         - name: Build Docker
           run: | 
-            cd ../../../ |
             echo ${PWD} |
             ls -la
       

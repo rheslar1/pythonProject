@@ -21,13 +21,16 @@ jobs:
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
     - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
     - run: echo "🍏 This job's status is ${{ job.status }}."
-  name: RemovePackages
-  runs-on: ubuntu-latest
-  defaults:
+ 
+  RemovePackages:
+    name: Remove Packages 
+    runs-on: ubuntu-latest
+    needs: Checkout
+    defaults:
       run:
         shell: bash
         working-directory: ./scripts
-  environment: production
-  steps:
-    - name: Remove_Packages
-      run: bash ./my-script.sh
+    environment: production
+      steps:
+      - name: Remove_Packages
+        run: bash ./my-script.sh

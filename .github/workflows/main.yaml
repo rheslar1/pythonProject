@@ -24,7 +24,7 @@ jobs:
     - name: RemovePackages
       run:  | 
         ls -la |
-        bash ./my-scriptsh
+        bash ./my-script.sh
         
        
 

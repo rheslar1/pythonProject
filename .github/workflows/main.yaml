@@ -1,4 +1,4 @@
-name: Checkout Branch1
+name: Checkout Branch
 run-name: ${{ github.actor }} is running the checkout action
 on:
   push:
@@ -8,12 +8,12 @@ on:
     
 jobs:
   Checkout:
-    name: Checkout branch
+    name: Checkout branch dev
     runs-on: ubuntu-latest
     environment: development
 
     steps:
-    - name: Checkout
+    - name: Checkout 
       uses: actions/checkout@v4
       with:
         fetch-depth: 2

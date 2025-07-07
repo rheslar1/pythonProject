@@ -14,13 +14,7 @@ jobs:
         steps:
           - run: echo 'The triggering workflow passed'
           - name: Run a script
-            run: ls -la
-  on-failure:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
-    steps:
-      - run: echo 'The triggering workflow failed'
-      
+            run: ls -l
   on-failure:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}

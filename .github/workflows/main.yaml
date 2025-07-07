@@ -8,9 +8,9 @@ on:
     
 jobs:
   Checkout:
-    name: Checkout branch main
+    name: Checkout branch dev
     runs-on: ubuntu-latest
-    environment: production
+    environment: development
     steps:
     - name: Checkout 
       uses: actions/checkout@v4

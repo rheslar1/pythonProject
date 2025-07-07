@@ -16,7 +16,7 @@ jobs:
         - name: Build Docker
           run: | 
               echo "${PWD}" |
-              cd "${PWD}/../scripts"
+              cd "${PWD}/.github
              
   on-failure:
     runs-on: ubuntu-latest

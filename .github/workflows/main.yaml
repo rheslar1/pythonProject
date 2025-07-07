@@ -23,7 +23,7 @@ jobs:
     - run: echo "🍏 This job's status is ${{ job.status }}."
   OnSuccess:
     runs-on: ubuntu-latest
-    run:
+      run:
         shell: bash
         working-directory: scripts
     steps:

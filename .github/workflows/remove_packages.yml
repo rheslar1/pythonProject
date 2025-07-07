@@ -6,15 +6,14 @@ on:
 jobs:
   on-success:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }
     defaults:
       run:
         working-directory: ./scripts
-    if: ${{ github.event.workflow_run.conclusion == 'success' }
-    steps:
-      - run: echo 'The triggering workflow passed'
-      - name: Run the scripts
-      - run: |
-          ./my-script.sh
+          steps:
+          - run: echo 'The triggering workflow passed'
+          - name: Run the scripts
+          - run: ./my-script.sh
   on-failure:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}

@@ -13,7 +13,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: scripts
+        working-directory: ./scripts
     environment: production
     steps:
     - name: Checkout 
@@ -23,8 +23,11 @@ jobs:
     - run: echo "🍏 This job's status is ${{ job.status }}."
   OnSuccess:
     runs-on: ubuntu-latest
+    run:
+        shell: bash
+        working-directory: scripts
     steps:
     - name: Remove Packages
-      run: }
-      ls -la |
-      bash ./my-script.sh
+      run: |
+        ls -la |
+        bash ./my-script.sh

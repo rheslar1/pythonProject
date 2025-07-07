@@ -1,4 +1,4 @@
-name: Checkout Branch
+name: Checkout and Build Branch
 run-name: ${{ github.actor }} is running the checkout action
 on:
   push:

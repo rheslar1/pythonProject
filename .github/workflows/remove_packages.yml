@@ -10,8 +10,8 @@ jobs:
     defaults:
       run:
         working-directory: /scripts
-      if: ${{ github.event.workflow_run.conclusion == 'success' }}
-       steps:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
         - name: Run a script
         - run: ./my-script.sh
     

@@ -8,7 +8,7 @@ on:
     
 jobs:
   Checkout:
-    name: Checkout and run scripts
+    name: Checkout 
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -21,5 +21,8 @@ jobs:
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
     - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
     - run: echo "🍏 This job's status is ${{ job.status }}."
-    - name: RemovePackages
+  OnSuccess:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Remove Packages
       run: ls -la
